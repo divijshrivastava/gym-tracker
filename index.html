@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTracker Pitch Deck</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .slide { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; box-sizing: border-box; }
+        .slide h1 { font-size: 3em; margin-bottom: 20px; }
+        .slide h2 { font-size: 2em; margin-bottom: 10px; }
+        .slide p { font-size: 1.2em; margin: 5px 0; }
+        .slide ul { list-style-type: disc; text-align: left; max-width: 800px; }
+        .slide:nth-child(even) { background-color: #e0f7fa; }
+        .slide:nth-child(odd) { background-color: #ffffff; }
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        <h1>GymTracker</h1>
+        <h2>The Ultimate Cross-Platform Gym Progress App</h2>
+        <p>Empowering Users to Track, Plan, and Share Their Fitness Journey</p>
+        <p>Presented by Divij Shrivastava</p>
+        <p>Date: July 24, 2025</p>
+    </div>
+
+    <div class="slide">
+        <h1>The Problem</h1>
+        <ul>
+            <li>Gym-goers struggle with manual tracking of manual workouts, PRs, reps, and body metrics using notebooks or basic apps.</li>
+            <li>Data loss is common when switching devices, leading to frustration.</li>
+            <li>Sharing workout plans and progress (e.g., trainers with clients) is inefficient, often relying on emails or screenshots.</li>
+            <li>Existing apps focus on generic fitness but lack seamless plan creation, guided workouts, and social sharing without overwhelming complexity.</li>
+            <li>User feedback highlights needs for simple, offline-first tracking with optional cloud features.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>The Solution</h1>
+        <p>GymTracker is a React Native-powered, cross-platform app (iOS & Android) for effortless gym progress tracking.</p>
+        <ul>
+            <li><strong>Core Features (Free)</strong>: Log workouts, track PRs/reps/weights, create custom plans, guided sessions, daily body metrics (weight, fat %).</li>
+            <li><strong>Premium Features (Paid)</strong>: Cloud sync for backups, share plans/progress with others (ideal for trainers/clients).</li>
+            <li>Offline-first with Firebase backend for seamless sync and real-time sharing.</li>
+            <li>Intuitive UI: Start with a simple home screen for quick exercise entry or plan selection.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Product Demo</h1>
+        <p><strong>Iteration 1 (MVP)</strong>: Users start workouts, add exercises, view history, create plans, track metrics—all locally.</p>
+        <p><strong>Iteration 2 (Premium)</strong>: Unlock cloud backup, plan sharing, and progress feeds.</p>
+        <p>Example Screen: Home interface with exercise input, exercises list, and planned workouts button.</p>
+        <p>(Insert wireframe or screenshot here—in development, this would show the app's clean, user-friendly design.)</p>
+    </div>
+
+    <div class="slide">
+        <h1>Market Opportunity</h1>
+        <p>The global fitness app market is booming, driven by rising health awareness and digital adoption post-pandemic.</p>
+        <ul>
+            <li>Projected revenue: US$8.30 billion in 2025, with a CAGR of 4.91% through 2029.</li>
+            <li>U.S. market alone: Expected to grow from US$4.75 billion in 2024 to US$12.55 billion by 2034 (CAGR 10.2%).</li>
+            <li>Total addressable market: Over 1 billion smartphone users interested in fitness, with 300 million+ active gym-goers worldwide.</li>
+            <li>Trends: Demand for personalized, shareable fitness tools—e.g., apps like Strava and MyFitnessPal dominate, but users seek better tracking and sharing.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Competitors & Differentiation</h1>
+        <p>Top gym tracking apps in 2025 include:</p>
+        <ul>
+            <li>Nike Training Club: Free workouts but limited custom tracking.</li>
+            <li>Jefit & Fitbod: Strong for logging but no robust sharing or trainer-client features.</li>
+            <li>Strava & Peloton: Social-focused but geared toward running/cycling, not gym-specific.</li>
+            <li>MyFitnessPal: Nutrition-heavy, weak on workout plans.</li>
+        </ul>
+        <p><strong>GymTracker's Edge</strong>: Freemium model with offline core + premium social/cloud features; simple UI for beginners; trainer-friendly sharing to tap into the $100B+ personal training market. User requests on X highlight needs for apps like ours (e.g., science-based recommendations, easy progress tracking).</p>
+    </div>
+
+    <div class="slide">
+        <h1>Business Model</h1>
+        <ul>
+            <li><strong>Freemium</strong>: Free tier for core tracking to drive user acquisition; premium subscription ($4.99/month or $49.99/year) for cloud sync, sharing, and advanced analytics.</li>
+            <li>Revenue Streams:</li>
+            <ul>
+                <li>Subscriptions (80% of revenue).</li>
+                <li>In-app purchases for custom plans/templates.</li>
+                <li>Partnerships with gyms/trainers for affiliate sharing.</li>
+            </ul>
+            <li>Projected: 100K users in Year 1, 20% conversion to premium → $1M+ ARR by Year 2.</li>
+            <li>Monetization via RevenueCat for seamless cross-platform billing.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Go-to-Market Strategy</h1>
+        <ul>
+            <li><strong>Acquisition</strong>: App Store/Google Play optimization, social media (X, Instagram) influencer partnerships with trainers, free trials.</li>
+            <li><strong>Target Users</strong>: Gym enthusiasts (18-45), trainers, and casual fitness users—leveraging X trends where users seek "gym tracking app recommendations."</li>
+            <li><strong>Marketing</strong>: Content on workout tips, user testimonials; beta testing via X communities.</li>
+            <li>Launch: Q4 2025, starting with MVP on both platforms.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Traction & Milestones</h1>
+        <ul>
+            <li><strong>Current Stage</strong>: Pre-launch; MVP in development (Iteration 1 complete by Q3 2025).</li>
+            <li><strong>Early Indicators</strong>: Positive user interest from X discussions (e.g., requests for apps with history-based suggestions, simple tracking).</li>
+            <li><strong>Milestones</strong>:</li>
+            <ul>
+                <li>Q3 2025: Beta release, 5K users.</li>
+                <li>Q1 2026: Full launch, premium features rollout.</li>
+                <li>Q4 2026: 500K users, profitability.</li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Team</h1>
+        <ul>
+            <li><strong>Founder/CEO</strong>: [Your Name] – Experienced developer with background in React Native and app scaling.</li>
+            <li><strong>CTO</strong>: Tech lead specializing in Firebase and mobile backend.</li>
+            <li><strong>Advisors</strong>: Fitness experts and app monetization specialists.</li>
+            <li>(Hypothetical—tailor to your actual team.)</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>The Ask</h1>
+        <p>Seeking $500K in seed funding for:</p>
+        <ul>
+            <li>Development completion ($200K).</li>
+            <li>Marketing & user acquisition ($150K).</li>
+            <li>Operations & team expansion ($150K).</li>
+        </ul>
+        <p>Equity: 10% at $5M valuation.</p>
+        <p>Contact: [Your Email/Phone]</p>
+    </div>
+
+    <div class="slide">
+        <h1>Thank You</h1>
+        <p>Questions? Let's build the future of fitness tracking together!</p>
+        <h2>GymTracker – Track. Plan. Share. Succeed.</h2>
+    </div>
+
+</body>
+</html>
