@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GymTracker Pitch Deck</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        .slide { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; box-sizing: border-box; }
-        .slide h1 { font-size: 3em; margin-bottom: 20px; }
-        .slide h2 { font-size: 2em; margin-bottom: 10px; }
-        .slide p { font-size: 1.2em; margin: 5px 0; }
-        .slide ul { list-style-type: disc; text-align: left; max-width: 800px; }
-        .slide:nth-child(even) { background-color: #e0f7fa; }
-        .slide:nth-child(odd) { background-color: #ffffff; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .slide {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .slide h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .slide h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .slide p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .slide ul {
+            list-style-type: disc;
+            text-align: left;
+            max-width: 800px;
+        }
+
+        .slide:nth-child(even) {
+            background-color: #e0f7fa;
+        }
+
+        .slide:nth-child(odd) {
+            background-color: #ffffff;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="slide">
@@ -28,20 +68,26 @@
     <div class="slide">
         <h1>The Problem</h1>
         <ul>
-            <li>Gym-goers struggle with manual tracking of manual workouts, PRs, reps, and body metrics using notebooks or basic apps.</li>
+            <li>Gym-goers struggle with manual tracking of manual workouts, PRs, reps, and body metrics using notebooks
+                or basic apps.</li>
             <li>Data loss is common when switching devices, leading to frustration.</li>
-            <li>Sharing workout plans and progress (e.g., trainers with clients) is inefficient, often relying on emails or screenshots.</li>
-            <li>Existing apps focus on generic fitness but lack seamless plan creation, guided workouts, and social sharing without overwhelming complexity.</li>
+            <li>Sharing workout plans and progress (e.g., trainers with clients) is inefficient, often relying on emails
+                or screenshots.</li>
+            <li>Existing apps focus on generic fitness but lack seamless plan creation, guided workouts, and social
+                sharing without overwhelming complexity.</li>
             <li>User feedback highlights needs for simple, offline-first tracking with optional cloud features.</li>
         </ul>
     </div>
 
     <div class="slide">
         <h1>The Solution</h1>
-        <p>GymTracker is a React Native-powered, cross-platform app (iOS & Android) for effortless gym progress tracking.</p>
+        <p>GymTracker is a React Native-powered, cross-platform app (iOS & Android) for effortless gym progress
+            tracking.</p>
         <ul>
-            <li><strong>Core Features (Free)</strong>: Log workouts, track PRs/reps/weights, create custom plans, guided sessions, daily body metrics (weight, fat %).</li>
-            <li><strong>Premium Features (Paid)</strong>: Cloud sync for backups, share plans/progress with others (ideal for trainers/clients).</li>
+            <li><strong>Core Features (Free)</strong>: Log workouts, track PRs/reps/weights, create custom plans, guided
+                sessions, daily body metrics (weight, fat %).</li>
+            <li><strong>Premium Features (Paid)</strong>: Cloud sync for backups, share plans/progress with others
+                (ideal for trainers/clients).</li>
             <li>Offline-first with Firebase backend for seamless sync and real-time sharing.</li>
             <li>Intuitive UI: Start with a simple home screen for quick exercise entry or plan selection.</li>
         </ul>
@@ -49,20 +95,122 @@
 
     <div class="slide">
         <h1>Product Demo</h1>
-        <p><strong>Iteration 1 (MVP)</strong>: Users start workouts, add exercises, view history, create plans, track metrics—all locally.</p>
+        <p><strong>Iteration 1 (MVP)</strong>: Users start workouts, add exercises, view history, create plans, track
+            metrics—all locally.</p>
         <p><strong>Iteration 2 (Premium)</strong>: Unlock cloud backup, plan sharing, and progress feeds.</p>
-        <p>Example Screen: Home interface with exercise input, exercises list, and planned workouts button.</p>
-        <p>(Insert wireframe or screenshot here—in development, this would show the app's clean, user-friendly design.)</p>
+        <div class="carousel" id="carousel-demo">
+            <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
+            <div class="carousel-images">
+                <img src="homescreen.png" class="carousel-image active"
+                    alt="Wireframe 1">
+                <img src="navigation-bar.png" class="carousel-image" alt="Wireframe 2">
+                <img src="exercises.png" class="carousel-image" alt="Wireframe 3">
+            </div>
+            <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
+        </div>
+        <style>
+            .carousel {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin: 30px 0;
+            }
+
+            .carousel-images {
+                position: relative;
+                width: 350px;
+                height: 700px;
+                overflow: hidden;
+            }
+
+            .carousel-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+
+            .carousel-image.active {
+                opacity: 1;
+                z-index: 1;
+            }
+
+            .carousel-btn {
+                background: #00796b;
+                color: #fff;
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5em;
+                cursor: pointer;
+                transition: background 0.2s;
+            }
+
+            .carousel-btn:hover {
+                background: #004d40;
+            }
+
+            @media (max-width: 500px) {
+                .carousel-images {
+                    width: 200px;
+                    height: 400px;
+                }
+            }
+        </style>
+        <script>
+            (function () {
+                const carousel = document.getElementById('carousel-demo');
+                const images = carousel.querySelectorAll('.carousel-image');
+                const prevBtn = carousel.querySelector('.prev');
+                const nextBtn = carousel.querySelector('.next');
+                let current = 0;
+                function showImage(idx) {
+                    images.forEach((img, i) => {
+                        img.classList.toggle('active', i === idx);
+                    });
+                }
+                prevBtn.addEventListener('click', () => {
+                    current = (current - 1 + images.length) % images.length;
+                    showImage(current);
+                });
+                nextBtn.addEventListener('click', () => {
+                    current = (current + 1) % images.length;
+                    showImage(current);
+                });
+                // Optional: swipe support for mobile
+                let startX = null;
+                carousel.querySelector('.carousel-images').addEventListener('touchstart', e => {
+                    startX = e.touches[0].clientX;
+                });
+                carousel.querySelector('.carousel-images').addEventListener('touchend', e => {
+                    if (startX === null) return;
+                    let endX = e.changedTouches[0].clientX;
+                    if (endX - startX > 50) prevBtn.click();
+                    else if (startX - endX > 50) nextBtn.click();
+                    startX = null;
+                });
+            })();
+        </script>
     </div>
 
     <div class="slide">
         <h1>Market Opportunity</h1>
-        <p>The global fitness app market is booming, driven by rising health awareness and digital adoption post-pandemic.</p>
+        <p>The global fitness app market is booming, driven by rising health awareness and digital adoption
+            post-pandemic.</p>
         <ul>
             <li>Projected revenue: US$8.30 billion in 2025, with a CAGR of 4.91% through 2029.</li>
-            <li>U.S. market alone: Expected to grow from US$4.75 billion in 2024 to US$12.55 billion by 2034 (CAGR 10.2%).</li>
-            <li>Total addressable market: Over 1 billion smartphone users interested in fitness, with 300 million+ active gym-goers worldwide.</li>
-            <li>Trends: Demand for personalized, shareable fitness tools—e.g., apps like Strava and MyFitnessPal dominate, but users seek better tracking and sharing.</li>
+            <li>U.S. market alone: Expected to grow from US$4.75 billion in 2024 to US$12.55 billion by 2034 (CAGR
+                10.2%).</li>
+            <li>Total addressable market: Over 1 billion smartphone users interested in fitness, with 300 million+
+                active gym-goers worldwide.</li>
+            <li>Trends: Demand for personalized, shareable fitness tools—e.g., apps like Strava and MyFitnessPal
+                dominate, but users seek better tracking and sharing.</li>
         </ul>
     </div>
 
@@ -75,13 +223,16 @@
             <li>Strava & Peloton: Social-focused but geared toward running/cycling, not gym-specific.</li>
             <li>MyFitnessPal: Nutrition-heavy, weak on workout plans.</li>
         </ul>
-        <p><strong>GymTracker's Edge</strong>: Freemium model with offline core + premium social/cloud features; simple UI for beginners; trainer-friendly sharing to tap into the $100B+ personal training market. User requests on X highlight needs for apps like ours (e.g., science-based recommendations, easy progress tracking).</p>
+        <p><strong>GymTracker's Edge</strong>: Freemium model with offline core + premium social/cloud features; simple
+            UI for beginners; trainer-friendly sharing to tap into the $100B+ personal training market. User requests on
+            X highlight needs for apps like ours (e.g., science-based recommendations, easy progress tracking).</p>
     </div>
 
     <div class="slide">
         <h1>Business Model</h1>
         <ul>
-            <li><strong>Freemium</strong>: Free tier for core tracking to drive user acquisition; premium subscription ($4.99/month or $49.99/year) for cloud sync, sharing, and advanced analytics.</li>
+            <li><strong>Freemium</strong>: Free tier for core tracking to drive user acquisition; premium subscription
+                ($4.99/month or $49.99/year) for cloud sync, sharing, and advanced analytics.</li>
             <li>Revenue Streams:</li>
             <ul>
                 <li>Subscriptions (80% of revenue).</li>
@@ -96,9 +247,12 @@
     <div class="slide">
         <h1>Go-to-Market Strategy</h1>
         <ul>
-            <li><strong>Acquisition</strong>: App Store/Google Play optimization, social media (X, Instagram) influencer partnerships with trainers, free trials.</li>
-            <li><strong>Target Users</strong>: Gym enthusiasts (18-45), trainers, and casual fitness users—leveraging X trends where users seek "gym tracking app recommendations."</li>
-            <li><strong>Marketing</strong>: Content on workout tips, user testimonials; beta testing via X communities.</li>
+            <li><strong>Acquisition</strong>: App Store/Google Play optimization, social media (X, Instagram) influencer
+                partnerships with trainers, free trials.</li>
+            <li><strong>Target Users</strong>: Gym enthusiasts (18-45), trainers, and casual fitness users—leveraging X
+                trends where users seek "gym tracking app recommendations."</li>
+            <li><strong>Marketing</strong>: Content on workout tips, user testimonials; beta testing via X communities.
+            </li>
             <li>Launch: Q4 2025, starting with MVP on both platforms.</li>
         </ul>
     </div>
@@ -107,7 +261,8 @@
         <h1>Traction & Milestones</h1>
         <ul>
             <li><strong>Current Stage</strong>: Pre-launch; MVP in development (Iteration 1 complete by Q3 2025).</li>
-            <li><strong>Early Indicators</strong>: Positive user interest from X discussions (e.g., requests for apps with history-based suggestions, simple tracking).</li>
+            <li><strong>Early Indicators</strong>: Positive user interest from X discussions (e.g., requests for apps
+                with history-based suggestions, simple tracking).</li>
             <li><strong>Milestones</strong>:</li>
             <ul>
                 <li>Q3 2025: Beta release, 5K users.</li>
@@ -120,7 +275,8 @@
     <div class="slide">
         <h1>Team</h1>
         <ul>
-            <li><strong>Founder/CEO</strong>: Divij Shrivastava – Experienced developer with background in React Native and app scaling.</li>
+            <li><strong>Founder/CEO</strong>: Divij Shrivastava – Experienced developer with background in React Native
+                and app scaling.</li>
             <li><strong>CTO</strong>: Tech lead specializing in Firebase and mobile backend.</li>
             <li><strong>Advisors</strong>: Fitness experts and app monetization specialists.</li>
             <li>(Hypothetical—tailor to your actual team.)</li>
@@ -146,4 +302,5 @@
     </div>
 
 </body>
+
 </html>
